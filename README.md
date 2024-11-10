@@ -25,3 +25,18 @@ https://laravel.com/docs/11.x/telescope
 - php artisan migrate
 
 Example: ![alt text](image-2.png)
+
+https://docs.laravel-excel.com/3.1/getting-started/
+- composer require maatwebsite/excel
+- php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config
+
+
+- Export:
+    - php artisan make:export UsersExport --model=User
+    - php artisan make:controller UsersController 
+
+ 
+- Import:
+    - php artisan make:import UsersImport --model=User
+
+
