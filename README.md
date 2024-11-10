@@ -9,6 +9,8 @@ https://laravel.com/docs/11.x/starter-kits
 - npm install
 - npm run build
 
+Example: ![alt text](image-1.png)
+
 https://laravel-auditing.com/
 - composer require owen-it/laravel-auditing
 - php artisan vendor:publish --provider "OwenIt\Auditing\AuditingServiceProvider" --tag="config"
@@ -16,3 +18,10 @@ https://laravel-auditing.com/
 - php artisan migrate
 
 Example:  ![alt text](image.png)
+
+https://laravel.com/docs/11.x/telescope
+- composer require laravel/telescope
+- php artisan telescope:install
+- php artisan migrate
+
+Example: ![alt text](image-2.png)
