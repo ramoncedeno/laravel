@@ -17,3 +17,9 @@ require __DIR__.'/auth.php';
 
 // Routes user export
 Route::get('/users-export',[UsersController::class,'export']);
+
+// Routes user export
+Route::get('/import-users', [UsersController::class, 'showImportForm'])->name('import'); // view form
+Route::post('/import-users', [UsersController::class, 'UsersimportForm'])->name('import'); //Import file from form
+
+

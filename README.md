@@ -38,5 +38,16 @@ https://docs.laravel-excel.com/3.1/getting-started/
  
 - Import:
     - php artisan make:import UsersImport --model=User
+     - Maatwebsite\Excel\Concerns\WithHeadingRow; // use WithHeadingRow at  UsersImport
+
+Form Import:  
+
+    <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
+        @csrf
+        <input type="file" name="file" required>
+        <button type="submit">Importar</button>
+    </form>
+
+
 
 
