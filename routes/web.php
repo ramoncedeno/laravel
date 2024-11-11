@@ -24,7 +24,7 @@ Route::get('/import-users', [UsersController::class, 'showImportForm'])->name('i
 Route::post('/import-users', [UsersController::class, 'usersimportForm'])->name('import'); //Import file from form
 
 // View Users
-Route::get('/users', [UsersController::class, 'index']);
+Route::get('/view-users', [UsersController::class, 'index']);
 
 
 // Routes sales import

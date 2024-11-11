@@ -13,20 +13,21 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->string('sales_card_number');
-            $table->string('sales_costumer_name');
-            $table->string('sales_costumer_date');
-            $table->string('sales_cosumer_contract');
-            $table->string('sales_acount');
-            $table->string('sales_sale_date');
-            $table->string('sales_employee_user');
-            $table->string('sales_employee_name');
-            $table->string('sales_trade_name');
-            $table->string('sales_product_number');
-            $table->string('sales_product_name');
-            $table->string('sales_employee_number');
-            $table->string('sales_employee_usersunnel');
+            $table->string('sales_card_number')->nullable();
+            $table->string('sales_costumer_name')->nullable();
+            $table->timestamp('sales_costumer_date')->nullable();
+            $table->string('sales_cosumer_contract')->nullable();
+            $table->string('sales_acount')->nullable();
+            $table->timestamp('sales_sale_date')->nullable();
+            $table->string('sales_employee_user')->nullable();
+            $table->string('sales_employee_name')->nullable();
+            $table->string('sales_trade_name')->nullable();
+            $table->string('sales_product_number')->nullable();
+            $table->string('sales_product_name')->nullable();
+            $table->string('sales_employee_number')->nullable();
+            $table->string('sales_employee_usersunnel')->nullable();
             $table->timestamps();
+
         });
 
     }
