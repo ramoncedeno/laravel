@@ -38,7 +38,7 @@ https://docs.laravel-excel.com/3.1/getting-started/
  
 - Import:
     - php artisan make:import UsersImport --model=User
-     - Maatwebsite\Excel\Concerns\WithHeadingRow; // use WithHeadingRow at  UsersImport
+     - Maatwebsite\Excel\Concerns\WithHeadingRow; // use WithHeadingRow at  UsersImport  ; https://docs.laravel-excel.com/3.1/imports/heading-row.html
 
 Form Import:  
 
