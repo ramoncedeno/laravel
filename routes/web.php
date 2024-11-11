@@ -16,10 +16,11 @@ Route::view('profile', 'profile')
 require __DIR__.'/auth.php';
 
 // Routes user export
-Route::get('/export-users',[UsersController::class,'export']);
+Route::get('/export-users',[UsersController::class,'export'])->name('export');
 
 // Routes user export
 Route::get('/import-users', [UsersController::class, 'showImportForm'])->name('import'); // view form
-Route::post('/import-users', [UsersController::class, 'UsersimportForm'])->name('import'); //Import file from form
+Route::post('/import-users', [UsersController::class, 'usersimportForm'])->name('import'); //Import file from form
 
-
+// View Users
+Route::get('/users', [UsersController::class, 'index']);

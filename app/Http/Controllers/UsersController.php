@@ -7,6 +7,7 @@ use App\Imports\UsersImport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -34,7 +35,7 @@ class UsersController extends Controller
 
 
     //Import file from form
-    public function UsersimportForm (Request $request)
+    public function usersimportForm (Request $request)
     {
         if ($request->hasFile('file')) {
             $file = $request->file('file');
@@ -43,6 +44,14 @@ class UsersController extends Controller
         }
 
         return redirect()->back()->with('error', 'No se ha seleccionado un archivo para importar');
+    }
+
+
+    // view users
+    public function index()
+    {
+        $users = User::paginate(15);
+        return view('Users',compact('users'));
     }
 
 }
