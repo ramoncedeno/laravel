@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\SalesExport;
 use App\Imports\SalesImport;
 use App\Models\Sale;
 use Illuminate\Http\Request;
@@ -9,6 +10,13 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class SaleController extends Controller
 {
+
+      // Function for export users
+      public function export() {
+
+        return Excel::download(new SalesExport,'users.xlsx');
+
+    }
 
 
     // Function for import users
@@ -38,62 +46,11 @@ class SaleController extends Controller
         return redirect()->back()->with('error', 'No se ha seleccionado un archivo para importar');
     }
 
-
-
-
-    /**
-     * Display a listing of the resource.
-     */
+     // view sales
     public function index()
     {
-        //
+        $sales = Sale::paginate(15);
+        return view('sales',compact('sales'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Sale $sale)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Sale $sale)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Sale $sale)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Sale $sale)
-    {
-        //
-    }
 }
