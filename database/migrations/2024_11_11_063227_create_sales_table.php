@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('sales_card_number')->nullable();
             $table->string('sales_costumer_name')->nullable();
-            $table->timestamp('sales_costumer_date')->nullable();
+            $table->string('sales_costumer_date')->nullable();
             $table->string('sales_cosumer_contract')->nullable();
             $table->string('sales_acount')->nullable();
-            $table->timestamp('sales_sale_date')->nullable();
+            $table->string('sales_sale_date')->nullable();
             $table->string('sales_employee_user')->nullable();
             $table->string('sales_employee_name')->nullable();
             $table->string('sales_trade_name')->nullable();

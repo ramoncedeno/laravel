@@ -49,5 +49,7 @@ Form Import:
     </form>
 
 
-Clear Project: php artisan optimize:clear
+![alt text](image-3.png)
+
+Command clear queue: php artisan optimize:clear
 
