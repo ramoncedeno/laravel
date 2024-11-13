@@ -28,14 +28,14 @@ class UsersController extends Controller
     }
 
     // View Form
-    public function showImportForm()
+    public function showimportform()
     {
-        return view('import');
+        return view('importusers');
     }
 
 
     //Import file from form
-    public function usersimportForm (Request $request)
+    public function usersimportform (Request $request)
     {
         if ($request->hasFile('file')) {
             $file = $request->file('file');
@@ -51,7 +51,7 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::paginate(15);
-        return view('Users',compact('users'));
+        return view('users',compact('users'));
     }
 
 }

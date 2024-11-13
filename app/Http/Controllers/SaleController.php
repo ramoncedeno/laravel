@@ -53,11 +53,11 @@ class SaleController extends Controller
     //     return view('sales',compact('sales'));
     // }
 
-        // view sales
+        // view sales without null
     public function index()
     {
         // Filtrar los registros donde al menos un campo relevante no sea nulo
-        $sales = Sale::whereNotNull('sales_card_number')->orWhereNotNull('sales_costumer_name')->paginate(5);
+        $sales = Sale::whereNotNull('sales_card_number')->paginate(5);
 
         return view('sales', compact('sales'));
 }
