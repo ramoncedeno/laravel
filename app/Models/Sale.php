@@ -53,6 +53,9 @@ class Sale extends Authenticatable implements Auditable
      */
     protected $cats = [
 
+        'sales_card_number'=>'encrypted',
+
+
 
 
     ];

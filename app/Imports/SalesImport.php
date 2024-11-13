@@ -40,22 +40,8 @@ class SalesImport implements ToModel,WithChunkReading,WithBatchInserts,ShouldQue
         ]);
     }
 
-            /*
-                CAMPOS ARCHIVO ORIGEN:
-                $row[0]'TARJETA
-                $row[1]'TARJETAHABIENTE
-                $row[2]'MIEMBRODESDE
-                $row[3]'CONTRATO
-                $row[4]'CUENTA
-                $row[5]'FECHADEVENTA
-                $row[6]'USUARIO
-                $row[7]'EJECUTIVO
-                $row[8]'TIENDA
-                $row[9]'CLAVEPRODUCTO
-                $row[10]'TIPOPROTECCI0N
-                $row[11]'EMPLEADO
-                $row[12]'USUARIOARCA
-            */
+
+
 
     // Chunk reading https://docs.laravel-excel.com/3.1/imports/chunk-reading.html
 

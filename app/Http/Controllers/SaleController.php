@@ -11,15 +11,15 @@ use Maatwebsite\Excel\Facades\Excel;
 class SaleController extends Controller
 {
 
-      // Function for export users
+      // Function for export sales
       public function export() {
 
-        return Excel::download(new SalesExport,'users.xlsx');
+        return Excel::download(new SalesExport,'sales.xlsx');
 
     }
 
 
-    // Function for import users
+    // Function for import sales
     public function import()
     {
         Excel::import(new SalesImport, 'sales.xlsx');
@@ -47,10 +47,19 @@ class SaleController extends Controller
     }
 
      // view sales
+    // public function index()
+    // {
+    //     $sales = Sale::paginate(15);
+    //     return view('sales',compact('sales'));
+    // }
+
+        // view sales
     public function index()
     {
-        $sales = Sale::paginate(15);
-        return view('sales',compact('sales'));
-    }
+        // Filtrar los registros donde al menos un campo relevante no sea nulo
+        $sales = Sale::whereNotNull('sales_card_number')->orWhereNotNull('sales_costumer_name')->paginate(5);
+
+        return view('sales', compact('sales'));
+}
 
 }

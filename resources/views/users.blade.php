@@ -9,9 +9,10 @@
             <h4 class="mb-0">List of users</h4>
         </div>
         <div class="table-responsive">
-            <table class="table table-striped table-hover">
-                <thead class="table-primary">
 
+            <table class="table table-striped table-hover">
+
+                <thead class="table-primary">
                     <tr>
                         <th scope="col">id</th>
                         <th scope="col">name</th>
@@ -19,6 +20,7 @@
                         <th scope="col">created_at</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
@@ -33,6 +35,7 @@
 
 
             </table>
+
         </div>
 
         <!-- Paginación -->
@@ -41,6 +44,6 @@
 
         </div>
 
-        <a href="{{ route('export') }}" class="btn btn-primary">Download </a>
+        <a href="{{ route('export.users') }}" class="btn btn-primary">Download </a>
     </div>
 </div>

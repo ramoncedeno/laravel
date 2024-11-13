@@ -22,10 +22,21 @@ class SalesExport implements FromCollection,WithHeadings, WithMapping
     public function headings(): array
     {
         return [
-            'id',
-            'name',
-            'email',
-            'created_at'
+
+        'sales_card_number',
+        'sales_costumer_name',
+        'sales_costumer_date',
+        'sales_cosumer_contract',
+        'sales_acount',
+        'sales_sale_date',
+        'sales_employee_user',
+        'sales_employee_name',
+        'sales_trade_name',
+        'sales_product_number',
+        'sales_product_name',
+        'sales_employee_number',
+        'sales_employee_usersunnel',
+
         ];
     }
 
@@ -36,20 +47,21 @@ class SalesExport implements FromCollection,WithHeadings, WithMapping
     {
         return [
 
-            $sale->sales_costumer_date,
-            $sale->sales_cosumer_contract,
-            $sale->sales_acount,
-            $sale->sales_sale_date,
-            $sale->sales_employee_user,
-            $sale->sales_employee_name,
-            $sale->sales_trade_name,
-            $sale->sales_product_number,
-            $sale->sales_product_name,
-            $sale->sales_employee_number,
-            $sale->sales_employee_usersunnel,
+        $sale->sales_card_number,
+        $sale->sales_costumer_name,
+        $sale->sales_costumer_date,
+        $sale->sales_cosumer_contract,
+        $sale->sales_acount,
+        $sale->sales_sale_date,
+        $sale->sales_employee_user,
+        $sale->sales_employee_name,
+        $sale->sales_trade_name,
+        $sale->sales_product_number,
+        $sale->sales_product_name,
+        $sale->sales_employee_number,
+        $sale->sales_employee_usersunnel,
 
         ];
     }
-
 
 }
