@@ -46,12 +46,6 @@ class SaleController extends Controller
         return redirect()->back()->with('error', 'No se ha seleccionado un archivo para importar');
     }
 
-     // view sales
-    // public function index()
-    // {
-    //     $sales = Sale::paginate(15);
-    //     return view('sales',compact('sales'));
-    // }
 
         // view sales without null
     public function index()
@@ -60,6 +54,6 @@ class SaleController extends Controller
         $sales = Sale::whereNotNull('sales_card_number')->paginate(5);
 
         return view('sales', compact('sales'));
-}
+    }
 
 }

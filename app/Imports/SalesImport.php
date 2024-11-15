@@ -36,7 +36,7 @@ class SalesImport implements ToModel,WithChunkReading,WithBatchInserts,ShouldQue
             'sales_product_number' => $row[9],
             'sales_product_name' => $row[10],
             'sales_employee_number' => $row[11],
-            'sales_employee_usersunnel' => $row[12]
+            'sales_employee_usersunnel' => $row[12],
         ]);
     }
 
